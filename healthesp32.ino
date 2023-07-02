@@ -3,8 +3,6 @@
 #include <SoftwareSerial.h>
 #include <SimpleTimer.h>
 
-WidgetLCD lcd(V5);
-
 char auth[] = "4X3sM0gYDQmB6ZuAuo_zhvMK8jmdc_4F";
 
 char ssid[] = "ZONG MBB-E8231-6E63";
@@ -67,13 +65,6 @@ void sensorvalue1()
 {
   Blynk.virtualWrite(V3, firstVal);
   Blynk.virtualWrite(V4, secondVal);
- 
-
-      lcd.clear();
-    lcd.print(0,0,"BPM:");
-    lcd.print(11,0,thirdVal);
-     lcd.print(0,1,"ElectroniClinic");
-
 }
 
 
